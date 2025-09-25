@@ -4,7 +4,7 @@ This repository contains analysis code and data for a neuroscience research proj
 
 ## Repository Structure
 
-### 📁 `behEphys/`
+### `behEphys/`
 Contains behavioral and electrophysiology data for multiple subjects (057-070).
 
 #### Data Organization:
@@ -20,7 +20,7 @@ Contains behavioral and electrophysiology data for multiple subjects (057-070).
     - `obsVars/`: Observable variables analysis plots (PDFs)
     - `appendFigs/`: Supplementary analysis figures
 
-### 📁 `mdl_analyses/`
+### `mdl_analyses/`
 Model-based analysis scripts and results for neural encoding.
 
 #### Key Files:
@@ -51,7 +51,7 @@ Model-based analysis scripts and results for neural encoding.
 - **`heat maps/`**: Correlation heatmaps for regression coefficients by brain region
 - **`neural_encoding_results/`**: Individual subject neural encoding result plots
 
-### 📁 `decoding analyses/`
+### `decoding analyses/`
 Machine learning decoding analysis of neural signals.
 
 #### Scripts:
@@ -67,14 +67,14 @@ Machine learning decoding analysis of neural signals.
   - `decoding_option.png`: Option decoding performance visualization
   - `secondaction_decoding.png`: Second action decoding results
 
-### 📊 Analysis Scripts (Root Directory)
+### Analysis Scripts (Root Directory)
 - **`option_ccgp_mcsd.py`**: Option analysis using canonical correlation/GP methods
 - **`pca_options_mcsd.py`**: Principal component analysis of option-related neural activity
 - **`dpca_options_mcsd.py`**: Demixed principal component analysis for options
 - **`regression_options_mcsd.py`**: Regression analysis for option encoding
 - **`regression_options_subj_mcsd.py`**: Subject-specific option regression analysis
 
-### 📈 Data Files (Root Directory)
+### Data Files (Root Directory)
 - **`det_hmbOforgetFixedEtaBetaExplorBias_behEphys.mat`**: Model parameters and behavioral data
 - **`behavioral_variables_correlation_heatmap.png`**: Overview correlation analysis
 
