@@ -139,6 +139,8 @@ def goal_context_subj(subj=[], group='behEphys', behavior_mdl='det_hmbOforgetFix
                         #run a linear regression
                         mdl = smf.ols(formula, data=df).fit()
                         
+                        #interaction term curr subgoal * decision value
+
                         # store results for coefficients: var_name, currSubgoal, goalAmt (excluding intercept)
                         coefs[e_idx, c_idx, v_idx, :] = mdl.params.values[1:]  # Skip intercept (index 0)
                         p_vals[e_idx, c_idx, v_idx, :] = mdl.pvalues.values[1:]  # Skip intercept (index 0)

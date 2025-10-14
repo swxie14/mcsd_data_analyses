@@ -7,11 +7,20 @@ plot the decoding results
 
 import numpy as np
 import matplotlib.pyplot as plt
-#from decode_subgoal_mcsd import decode_subgoal_mcsd
-from decode_second_choice_mcsd import decode_second_choice_mcsd
-from decode_option_mcsd import decode_option_mcsd
+from pathlib import Path
 
-def plot_decoding_mcsd(decode_type='option',group='behEphys',regions=['SMA','ACC','OF','A','H','PT','CM','PRV', 'IFG'],subjs=[]):
+from decoding.decode_second_choice_mcsd import decode_second_choice_mcsd
+from decoding.decoding_option_mcsd import decode_option_mcsd
+
+
+
+def plot_decoding_mcsd(decode_type='option',group='behEphys',regions=['SMA','ACC','OF','A','H','PT','CM','PRV', 'IFG'],subjs=None):
+
+    if subjs is None:
+        curr_dir = Path.cwd()
+        data_path = curr_dir / group
+        subjs = [subj.name for subj in data_path.iterdir() if 'subj' in subj.name]
+
     n_regions = len(regions)
     accuracies = [None]*n_regions
     within_class_accs = [None]*n_regions
