@@ -2,29 +2,9 @@
 
 This repository contains analysis code and data for a neuroscience research project investigating behavioral and electrophysiological data from human subjects performing decision-making tasks.
 
-## Recent Updates (October 2025)
-
-### 🔧 Code Quality Improvements
-- **Refactored data handling** with object-oriented design using `Behavior` and `Spikes` classes
-- **Cross-platform compatibility** using `pathlib` for all file operations (Windows/Linux/macOS)
-- **Improved code reusability** with centralized support library
-- **Enhanced documentation** with comprehensive docstrings
-
-### Statistical Analysis Enhancements
-- **Exact p-value calculation** using permutation testing with full null distributions
-- **Unified testing framework** (`test_decoder.py`) for comparing real vs. null decoding
-- **Stratified k-fold cross-validation** ensuring balanced class representation
-- **Proper null hypothesis testing** with label shuffling for unbiased accuracy estimates
-
-### Bug Fixes
-- Fixed NumPy array dimension handling in spike data processing
-- Resolved cross-platform path issues in data loading
-- Corrected label indexing in multi-class decoders
-- Added error handling for regions with insufficient cells
-
 ## Repository Structure
 
-### 📁 `behEphys/`
+### `behEphys/`
 Contains behavioral and electrophysiology data for multiple subjects (057-070).
 
 #### Data Organization:
@@ -40,7 +20,7 @@ Contains behavioral and electrophysiology data for multiple subjects (057-070).
     - `obsVars/`: Observable variables analysis plots (PDFs)
     - `appendFigs/`: Supplementary analysis figures
 
-### 📁 `mdl_analyses/`
+### `mdl_analyses/`
 Model-based analysis scripts and results for neural encoding.
 
 #### Key Files:
@@ -71,7 +51,7 @@ Model-based analysis scripts and results for neural encoding.
 - **`heat maps/`**: Correlation heatmaps for regression coefficients by brain region
 - **`neural_encoding_results/`**: Individual subject neural encoding result plots
 
-### 📁 `support/`
+### `support/`
 **NEW**: Core library for data handling and decoding (October 2025).
 
 #### Classes:
@@ -88,7 +68,7 @@ Model-based analysis scripts and results for neural encoding.
   - `build_perm_spikes()`: Trial subsampling and permutation with optional label shuffling
   - Returns full accuracy distributions for statistical testing
 
-### 📁 `decoding/`
+### `decoding/`
 Machine learning decoding analysis of neural signals.
 
 #### Main Scripts:
@@ -107,14 +87,14 @@ Machine learning decoding analysis of neural signals.
   - `test_option_mcsd.py`, `test_second_choice_mcsd.py`
   - Preserved for backward compatibility
 
-### 📊 Analysis Scripts (Root Directory)
+### Analysis Scripts (Root Directory)
 - **`option_ccgp_mcsd.py`**: Option analysis using canonical correlation/GP methods
 - **`pca_options_mcsd.py`**: Principal component analysis of option-related neural activity
 - **`dpca_options_mcsd.py`**: Demixed principal component analysis for options
 - **`regression_options_mcsd.py`**: Regression analysis for option encoding
 - **`regression_options_subj_mcsd.py`**: Subject-specific option regression analysis
 
-### 📈 Utility Files (Root Directory)
+### Utility Files (Root Directory)
 - **`utils.py`**: Core data loading functions with cross-platform support
   - `load_ephys_beh_data_mcsd()`: Loads behavioral and spike data for a subject
   - `load_behavior_mdl_mcsd()`: Loads model parameters and behavioral data
@@ -124,7 +104,7 @@ Machine learning decoding analysis of neural signals.
   - Demonstrates `test_decoder()` and `compare_decoders()` usage
   - Entry point for running decoding analyses
 
-### 📈 Data Files (Root Directory)
+### Data Files (Root Directory)
 - **`det_hmbOforgetFixedEtaBetaExplorBias_behEphys.mat`**: Model parameters and behavioral data
 - **`behavioral_variables_correlation_heatmap.png`**: Overview correlation analysis
 

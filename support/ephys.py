@@ -55,7 +55,7 @@ class Spikes:
                     epoch_spikes[trial] = np.sum(cell_spikes[state_map[trial]]) / len(state_map[trial])
                 else:
                     epoch_spikes[trial] = 0 
-
+                    
         spikes = None
         if np.sum(epoch_spikes == 0) / len(epoch_spikes) < 0.5:
             #filter any correlation between spikes and trial number
